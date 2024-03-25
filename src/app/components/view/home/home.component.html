@@ -1,0 +1,37 @@
+<div class="container" *ngIf="!loading">
+    <div *ngFor="let movie of movies" [ngClass]="{'itemExtend': detailsVisibility[movie.imdbID], 'item': !detailsVisibility[movie.imdbID]}">    
+        <mat-card class="card">
+            <div [ngClass]="{'movieContainerExtend': detailsVisibility[movie.imdbID], 'movieContainer': !detailsVisibility[movie.imdbID]}">
+                <div class="left">
+                    <img class="moviePoster" [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+                </div>
+                <div class="right">
+                    <h4 [ngClass]="{'titleExtend': detailsVisibility[movie.imdbID], 'title': !detailsVisibility[movie.imdbID]}">{{movie.Title}}</h4>
+                    <button mat-icon-button (click)="toggleFavorite(movie.imdbID)">
+                        <mat-icon class="heart-icon"> {{ isFavorite(movie.imdbID) ? 'favorite' : 'favorite_border' }}</mat-icon>
+                    </button>
+                    <div class="infoSection" *ngIf="detailsVisibility[movie.imdbID]">
+                        <span class="label">Plot</span>
+                        <div class="content">{{movieInfo?.Plot}}</div>
+                        <br>
+                        <span class="label">Actors</span>
+                        <div class="content">{{movieInfo?.Actors}}</div>
+                        <br>
+                        <span class="label">Ratings</span>
+                        <div *ngFor="let item of movieInfo?.Ratings">
+                            -{{item.Source}} : {{item.Value}}
+                        </div>
+                    </div>
+                    <div class="lineBreak" [ngClass]="{'lineBreakReduced': detailsVisibility[movie.imdbID], 'lineBreak': !detailsVisibility[movie.imdbID]}"> 
+                        <hr class="footerline"/>
+                        <div class="footer">
+                            <p class="movieYear">{{movie.Year}}</p>
+                            <button *ngIf="!detailsVisibility[movie.imdbID]" class="movieInfo" mat-raised-button color="primary" (click)="getMovieInfo(movie.imdbID)">Details</button>
+                            <button *ngIf="detailsVisibility[movie.imdbID]" class="movieInfo" mat-raised-button color="accent" (click)="toggleDetails(movie.imdbID)">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.alertSuccess {
+    margin-left: 17vw;
+    padding: 2vw;
+    background: rgba(170, 173, 170, 0.3);
+    color: black;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+}
+
+.alertError {
+    margin-left: 17vw;
+    padding: 2vw;
+    background: rgba(233, 7, 7, 0.1);
+    color: black;
+    border: 1px solid red;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+}

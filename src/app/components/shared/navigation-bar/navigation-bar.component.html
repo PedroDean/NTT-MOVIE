@@ -1,0 +1,18 @@
+<hr class="lineOne"/>
+<mat-toolbar>
+    <div class="container">
+        <div class="title" (click)="goToMain()">DeanFLIX</div>
+        <div class="search">
+            <div class="title" (click)="goToMain()"></div>
+            <button class="back-to-menu-button" (click)="goToMain()">Back to Menu</button>
+            <span class="searchLabel">SEARCH A MOVIE:</span>
+            <input type="text" #searchInput >
+            <button mat-raised-button color="primary" class="searchBtn" (click)="onSearchButtonClick(searchInput.value)">Search</button>
+        </div>
+        <button mat-raised-button color="primary" class="showFavoritesBtn" (click)="onShowFavoritesButtonClick()">Show Favorites</button>
+    </div>
+</mat-toolbar>
+<hr class="lineTwo"/>
+<br>
+<app-alert [message]="this.alertService.alertMessage" [isError]="this.alertService.isError" ></app-alert>
+<router-outlet></router-outlet>

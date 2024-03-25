@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+  }
+
+.spinner__loading {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 17vw;
+    padding-right: 17vw;
+}
+
+.item {
+    width: 50%;
+    padding-right: 1vw;
+}
+
+.itemExtend {
+    width: 100%;
+    padding-right: 1vw;
+}
+
+.card {
+    box-sizing: border-box;
+    margin-bottom: 3vw;
+    border: 2px solid black;
+}
+
+.movieContainer {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    max-height: 20vw;
+}
+
+.movieContainerExtend {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+}
+.heart-icon {
+    font-size: 1.0em;
+    color: rgb(0, 0, 0);
+
+}
+.title {
+    margin-top: 1vw;
+    padding-left: 1vw;
+    width: 20vw; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.titleExtend {
+    margin-top: 1vw;
+    padding-left: 1vw;
+    width: 100%; 
+    white-space: wrap; 
+}
+.moviePoster {
+    height: 16.35vw;
+    width: 10vw;
+}
+
+.left {
+   margin-left: 0;
+}
+
+.lineBreak {
+    margin-top: 9.5vw;
+    width: auto;
+}
+
+.lineBreakReduced {
+    margin-top: 1vw;
+    width: auto;
+}
+
+.footerline {
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.footer {
+    display: inline-flex;
+    padding-top: 0.6vw;
+    padding-left: 1vw;
+}
+.movieYear {
+    color: rgb(0, 0, 0);
+    width: 2.5vw; 
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: none; 
+}
+
+.movieInfo {
+    margin-top: -0.7vw;
+    margin-left: 9vw;
+    width: 8vw;
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-family: Helvetica, sans-serif;;
+    margin-right: 1vw;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+}
+
+.label {
+    font-size: 0.9vw;
+}
+
+.content {
+    max-width: 95%;
+}
+
+@media (max-width :768px) {
+
+    .container {
+        padding: 0;
+        height: 160vw;
+        width: auto;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .item {
+        width: 100%;
+        padding: 1.2vw;
+    }
+
+    .card {
+       width: 100%; 
+    }
+
+    .movieContainer {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        max-height: unset;
+    }
+
+    .left {
+        margin-left: 2vw;
+        margin-bottom: -1.32vw;
+     }
+     
+     .right {
+        padding-left: 0;
+        width: 100%;
+        margin-right: 0;
+     }
+     
+    .title {
+        margin-top: 4vw;
+        padding-left: 3vw;
+        width: 55vw;
+    }
+
+    .titleExtend {
+        margin-top: 4vw;
+        padding-left: 3vw;
+        width: 100%; 
+    }
+    .moviePoster {
+        height: 49.8vw;
+        width: 35vw;
+        margin-left: -2vw;
+    }
+    
+    .lineBreak {
+        margin-top: 25vw;
+        width: auto;
+    }
+
+    .footer {
+        display: inline-flex;
+        padding-left: 3vw;
+        padding-top: 2vw;
+    }
+
+    .movieYear {
+        width: 11.5vw; 
+        font-size: 5vw;
+    }
+
+    .movieInfo {
+        margin-top: -2vw;
+        margin-left: 26vw;
+        width: 19vw;
+        font-size: 2.6vw;
+        margin-right: 0vw;
+    }
+
+    .footerline {
+        border: 1px solid rgb(255, 0, 0);
+    }
+
+    .label {
+        font-size: 3.5vw;
+    }
+
+    .infoSection {
+        padding-left: 3vw;
+    }
+}
